@@ -77,7 +77,6 @@ header {
     }
     
     header nav ul li .children {
-        display: none;
         background: transparent;
         position: absolute;
         width: 250%;
