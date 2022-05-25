@@ -46,6 +46,8 @@ header {
         max-width: 1000px;
         width:95%;
         margin:20px auto;
+        position: sticky;
+        top: 0;
     }
     
     header nav ul {
@@ -170,4 +172,8 @@ header {
     header nav ul li .caret {
         float: right;
     }
+}
+.pegajoso{
+    position: sticky;
+    top: 0;
 }

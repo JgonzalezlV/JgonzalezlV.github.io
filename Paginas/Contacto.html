@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/Multimedia/IconoViajes.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/formulario.css">
     <script src="https://kit.fontawesome.com/0e780eb015.js" crossorigin="anonymous"></script>
     <title>Contacto</title>
 </head>
 <body>
-    <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+    <a href="/index.html"><i class="fa-solid fa-house"></i> Inicio</a>
     <figure>
         <img src="/Multimedia/correo.jpg" alt="Correo">
         <figcaption>Correo</figcaption>
@@ -18,5 +20,35 @@
         <img src="/Multimedia/telefono.jpg" alt="Telefono">
         <figcaption>Teléfono</figcaption>
     </figure>
+    <br><br><br>
+    <div>
+        <h1>Formulario:</h1><br>
+        <form class="formulario">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre"><br>
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" id="apellido" name="apellido"><br><br>
+            <p><strong>Seleccione su género:</strong></p>
+            <input type="radio" id="Hombre" name="genero" value="Hombre">
+            <label for="Hombre">Hombre</label><br>
+            <input type="radio" id="Mujer" name="genero" value="Mujer">
+            <label for="Mujer">Mujer</label><br>
+            <input type="radio" id="Otros" name="Otros" value="Otros">
+            <label for="Otros">Otros</label><br><br>
+            <label for="estudios"><strong>Estudio máximo alcanzado:</strong></label>
+            <select id="estudios" name="estudios">
+                <option value="vacio"></option>
+                <option value="ESO">ESO</option>
+                <option value="FPGM">Grado Medio</option>
+                <option value="Bachillerato">Bachillerato</option>
+                <option value="FPGS">Grado Superior</option>
+            </select><br><br>
+            
+            <input type="checkbox" id="de" name="de" value="de">
+            <label for="de">Estás de acuerdo.</label><br>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form> 
+    </div>
 </body>
 </html>
