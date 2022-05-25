@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/index.css".css">
+    <link rel="stylesheet" href="CSS/formulario.css">
     <link rel="shortcut icon" href="/Multimedia/IconoViajes.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/0e780eb015.js" crossorigin="anonymous"></script>
+    <script src="menu.js"></script>
     <title>Página Principal</title>
 </head>
 <body>
@@ -15,12 +17,16 @@
             <div class="cabecera">
                 <header>
                     <nav>
-                        <ul>
-                            <li><a href="/index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
-                            <li><a href="#"><i class="fa-solid fa-user"></i> Sobre mí</a></li>
-                            <li><a href="/Paginas/Contacto.html"><i class="fa-solid fa-phone"></i> Contacto</a></li>        
+                        <div class="nav-movil">
+                          <a id="nav-boton" href="">
+                            <span></span>
+                          </a>
+                        </div>
+                        <ul class="nav-menu">
+                          <li><a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                          <li><a href=""><i class="fa-solid fa-user"></i>Sobre mi</a></li>
                         </ul>
-                    </nav>
+                      </nav>
                 </header>
             </div>
             <div class="lateral">
@@ -42,10 +48,6 @@
             <div class="cuerpo">
                 <main>
                     <div>
-                        <h1>Introducción</h1>
-                        <p>Hay muchos lugares que visitar en China, un país inmenso en extensión, además de ser el más poblado del mundo.</p>
-                    </div>
-                    <div>
                         <p>The standard Lorem Ipsum passage, used since the 1500s
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                             <br>
@@ -60,6 +62,50 @@
                             <br>
                             1914 translation by H. Rackham
                             "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."</p>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="/Multimedia/correo.jpg" alt="Correo">
+                            <figcaption>Correo</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/Multimedia/telefono.jpg" alt="Telefono">
+                            <figcaption>Teléfono</figcaption>
+                        </figure>
+                        <br><br><br>
+                        <h1>Contacto:</h1>
+                        <div>
+                            <h1>Formulario:</h1><br>
+                            <form class="formulario" method="post">
+                                <label for="nombre">Nombre:</label><br>
+                                <input type="text" id="nombre" name="nombre"><br>
+                                <label for="apellido">Apellido:</label><br>
+                                <input type="text" id="apellido" name="apellido"><br>
+                                <label for="pwd">Contraseña:</label><br>
+                                <input type="password" id="pwd" name="pwd">
+                                <p><strong>Seleccione su género:</strong></p>
+                                <input type="radio" id="Hombre" name="genero" value="Hombre">
+                                <label for="Hombre">Hombre</label><br>
+                                <input type="radio" id="Mujer" name="genero" value="Mujer">
+                                <label for="Mujer">Mujer</label><br>
+                                <input type="radio" id="Otros" name="Otros" value="Otros">
+                                <label for="Otros">Otros</label><br><br>
+                                <label for="estudios"><strong>Estudio máximo alcanzado:</strong></label>
+                                <select id="estudios" name="estudios">
+                                    <option value="vacio">Seleccione una opcion:</option>
+                                    <option value="ESO">ESO</option>
+                                    <option value="FPGM">Grado Medio</option>
+                                    <option value="Bachillerato">Bachillerato</option>
+                                    <option value="FPGS">Grado Superior</option>
+                                </select><br><br>
+                                <textarea name="mensage" rows="10" cols="30"> </textarea><br>
+
+                                <input type="checkbox" id="de" name="de" value="de">
+                                <label for="de">Estás de acuerdo.</label><br>
+                                <br><br>
+                                <input type="submit" value="Submit">
+                            </form> 
+                        </div>
                     </div>
                 </main>
             </div>

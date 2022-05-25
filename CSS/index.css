@@ -41,21 +41,22 @@ header {
     }
     
     header nav {
-        background:hsla(203, 76%, 76%, 0.952);
-        z-index:1000;
-        max-width: 1000px;
-        width:95%;
-        margin:20px auto;
+        float: left;
+        background: hsla(207, 46%, 73%, 0.349);
+        width:100%;
         position: sticky;
         top: 0;
     }
     
     header nav ul {
-        list-style:none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background:hsla(207, 57%, 48%, 0.459);
     }
     
     header nav ul li {
-        display:inline-block;
+         float: left;
         position: relative;
     }
     
@@ -64,116 +65,157 @@ header {
     }
     
     header nav ul li a {
-        color:hsla(0, 0%, 0%, 0.918);
-        display:block;
-        text-decoration:none;
-        padding: 20px;
-    }
-    
-    header nav ul li a span {
-        margin-right:10px;
-    }
-    
-    header nav ul li:hover .children {
-        display:block;
-    }
-    
-    header nav ul li .children {
-        background: transparent;
-        position: absolute;
-        width: 250%;
-        z-index:1000;
-    }
-    
-    header nav ul li .children li {
-        display:block;
-        overflow: hidden;
-        border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
-    }
-    
-    header nav ul li .children li a {
         display: block;
+        padding: 0 20px;
+        line-height: 70px;
+        color: hsl(0, 0%, 0%);
+        text-decoration: none;
     }
     
-    header nav ul li .children li a span {
-        float: right;
-        position: relative;
-        top:3px;
-        margin-right:0;
-        margin-left:10px;
+    header nav ul li a:hover {
+        background: #2581dc;
+        color: #ffffff;
     }
     
-    header nav ul li .caret {
-        position: relative;
-        top:3px;
-        margin-left:10px;
-        margin-right:0px;
-    }
-    
-@media screen and (max-width: 800px) {
-    body {
-            padding-top:80px;
-        }
-    
-    .menu_bar {
-            display:block;
-            width:100%;
-            position: fixed;
-            top:0;
-            background:hsla(162, 75%, 77%, 0.74);
-        }
-    
-    .menu_bar .bt-menu {
-            display: block;
-            padding: 20px;
-            color: hsl(0, 0%, 100%);
-            overflow: hidden;
-            font-size: 25px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-    
-    .menu_bar span {
-        float: right;
-        font-size: 40px;
-    }
-    
-    header nav {
-        width: 80%;
-        height: calc(100% - 80px);
-        position: fixed;
-        right:100%;
-        margin: 0;
-        overflow: scroll;
-    }
-    
-    header nav ul li {
-        display: block;
-        border-bottom:1px solid hsla(0, 0%, 100%, 0.5);
-    }
-    
-    header nav ul li a {
-        display: block;
-    }
-    
-    header nav ul li:hover .children {
+    .nav-movil {
         display: none;
-    }
-    
-    header nav ul li .children {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #001628;
+        height: 70px;
         width: 100%;
-        position: relative;
-    }
-    
-    header nav ul li .children li a {
-        margin-left:20px;
-    }
-    
-    header nav ul li .caret {
-        float: right;
-    }
+      }
+      @media screen and (max-width: 979px) {
+        .nav-movil {
+          display: block;
+        }
+      
+        .nav-menu {
+          display: none;
+        }
+      }
+
+      #nav-boton {
+        position: absolute;
+        left: 20px;
+        top: 25px;
+        cursor: pointer;
+        width:20px;
+        height: 10px;
+        padding: 5px 15px 15px 0px;
+        background: #fff;
+        z-index:1;
+      }
+
+      @media screen and (min-width: 980px) {
+        .nav-menu {
+          display: block !important;
+        }
+      }
+
+      @media screen and (max-width: 979px) {
+        .nav-movil {
+          display: block;
+        }
+      
+        .nav-menu {
+          display: none;
+          margin-top: 70px;
+        }
+        
+        .nav-menu li {
+          float: none;
+        }
+        .nav-menu li a {
+          padding: 20px;
+          line-height: 20px;
+        }
+        .nav-menu li ul li a {
+          padding-left: 30px;
+        }
+        
+        .nav-submenu {
+          position: static;
+        }
+      }
+#nav-boton span,
+#nav-boton span:after,
+#nav-boton span:before {
+  transition: all 500ms ease-in-out;
+  border-radius: 1px;
+  height: 5px;
+  width: 40px;
+  position: absolute;
+  display: block;
+  content: "";
+  background: #fff;
+}
+
+#nav-boton span:before {
+  top: -10px;
+}
+#nav-boton span:after {
+  bottom: -10px;
+}
+
+#nav-boton.activo span {
+  background-color: transparent;
+}
+
+#nav-boton.activo span:before,
+#nav-boton.activo span:after {
+  top: 0;
+}
+
+#nav-boton.activo span:after {
+  transform: rotate(-45deg);
+}
+
+#nav-boton.activo span:before {
+  transform: rotate(45deg);
 }
 .pegajoso{
     position: sticky;
     top: 0;
 }
+
+aside{
+    background-color: hsla(34, 78%, 91%, 0.582);
+}
+
+footer {
+    background: hsla(281, 39%, 83%, 0.719);
+    color: hsla(0, 0%, 0%, 0.623);
+    padding: .2rem .3rem 1rem .3rem;
+    position: absolute;
+    border-radius: 2rem 2rem 0 0;
+    animation-name: movimiento;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes movimiento{
+    0% {
+      left: 100;
+      top: 100;
+    }
+    10% {
+      left: 95rem;
+      top: 90rem;
+      color: hsla(281, 39%, 83%, 0.719);
+    }
+    30% {
+      top: 95rem;
+      left: 95rem;
+      color:hsla(0, 0%, 0%, 0.623);
+    }
+    60%{
+      top: 95rem;
+      left: 90;
+      color: hsla(281, 39%, 83%, 0.719);
+    }
+    100% {
+      top: 100;
+      left: 1000;
+    }
+  }
